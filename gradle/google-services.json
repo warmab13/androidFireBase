@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "744666681585",
+    "firebase_url": "https://curso-android-fb.firebaseio.com",
+    "project_id": "curso-android-fb",
+    "storage_bucket": "curso-android-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744666681585:android:8ecfeebf235a1e7f",
+        "android_client_info": {
+          "package_name": "warmab.androidfb.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744666681585-qs8jagt9u1akcn8nelg4qbfcs3jtsb3r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "warmab.androidfb.com",
+            "certificate_hash": "cf243f4ed7cf44362010873ba8a907a4ab9ea716"
+          }
+        },
+        {
+          "client_id": "744666681585-73tfj42alu59jkh1bhr7krufn5bjltqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhnoEU8hlvXAJM7JrQ_Q5pT0wo7wHAArk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744666681585-73tfj42alu59jkh1bhr7krufn5bjltqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
