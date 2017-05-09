@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "744666681585",
-    "firebase_url": "https://curso-android-fb.firebaseio.com",
-    "project_id": "curso-android-fb",
-    "storage_bucket": "curso-android-fb.appspot.com"
+    "project_number": "430743520371",
+    "firebase_url": "https://android-fb-7dae2.firebaseio.com",
+    "project_id": "android-fb-7dae2",
+    "storage_bucket": "android-fb-7dae2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:744666681585:android:8ecfeebf235a1e7f",
+        "mobilesdk_app_id": "1:430743520371:android:e0904fac8fee9633",
         "android_client_info": {
-          "package_name": "warmab.androidfb.com"
+          "package_name": "com.androidfb.warmab.androidfb"
         }
       },
       "oauth_client": [
         {
-          "client_id": "744666681585-qs8jagt9u1akcn8nelg4qbfcs3jtsb3r.apps.googleusercontent.com",
+          "client_id": "430743520371-ctekmakla7qqfb9q8pfp4ufjfddm00r2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "warmab.androidfb.com",
+            "package_name": "com.androidfb.warmab.androidfb",
             "certificate_hash": "cf243f4ed7cf44362010873ba8a907a4ab9ea716"
           }
         },
         {
-          "client_id": "744666681585-73tfj42alu59jkh1bhr7krufn5bjltqu.apps.googleusercontent.com",
+          "client_id": "430743520371-cvmi25tjkemu0hivtrmrvj1q094oitfs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAhnoEU8hlvXAJM7JrQ_Q5pT0wo7wHAArk"
+          "current_key": "AIzaSyD0IpI4iyFy9OCk_rNSzZgbDYvtqlSNjDE"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "744666681585-73tfj42alu59jkh1bhr7krufn5bjltqu.apps.googleusercontent.com",
+              "client_id": "430743520371-cvmi25tjkemu0hivtrmrvj1q094oitfs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
