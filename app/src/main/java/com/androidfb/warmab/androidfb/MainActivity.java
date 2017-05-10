@@ -1,5 +1,7 @@
 package com.androidfb.warmab.androidfb;
 
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView lblTemperatura;
     private TextView lblHumedad;
     private Button btnEliminarListener;
+    private CoordinatorLayout coordinatorLayout;
 
     private DatabaseReference dbCielo;
     private DatabaseReference dbPrediccion;
@@ -40,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dbPrediccion.removeEventListener(eventListener);
+                Snackbar snackbar = Snackbar
+                        .make(v, "Listener a la colleccion eliminado", Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+
             }
         });
 
