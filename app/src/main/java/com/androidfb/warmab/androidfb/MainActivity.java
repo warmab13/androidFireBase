@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference dbPrediccion;
     private ValueEventListener eventListener;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,20 +35,23 @@ public class MainActivity extends AppCompatActivity {
         lblHumedad = (TextView)findViewById(R.id.lblHumedad);
         btnEliminarListener = (Button)findViewById(R.id.btnEliminarListener);
 
-        DatabaseReference dbCielo = FirebaseDatabase.getInstance()
-                .getReference().child("prediccion-hoy").child("cielo");
+        DatabaseReference dbPrediccion = FirebaseDatabase.getInstance()
+                .getReference().child("prediccion-hoy");
 
-        dbCielo.addValueEventListener(new ValueEventListener() {
+        eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String valor = dataSnapshot.getValue().toString();
-                lblCielo.setText(valor);
+                lblCielo.setText(dataSnapshot.child("cielo").getValue().toString());
+                lblTemperatura.setText(dataSnapshot.child("temperatura").getValue().toString());
+                lblHumedad.setText(dataSnapshot.child("humedad").getValue().toString());
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.e(TAGLOG, "Error!", databaseError.toException());
             }
-        });
+        };
+
+        dbPrediccion.addValueEventListener(eventListener);
     }
 }
