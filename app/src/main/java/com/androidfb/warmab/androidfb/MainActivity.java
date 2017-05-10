@@ -3,6 +3,7 @@ package com.androidfb.warmab.androidfb;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -35,15 +36,22 @@ public class MainActivity extends AppCompatActivity {
         lblHumedad = (TextView)findViewById(R.id.lblHumedad);
         btnEliminarListener = (Button)findViewById(R.id.btnEliminarListener);
 
-        DatabaseReference dbPrediccion = FirebaseDatabase.getInstance()
-                .getReference().child("prediccion-hoy");
+        btnEliminarListener.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                dbPrediccion.removeEventListener(eventListener);
+            }
+        });
+
+        dbPrediccion = FirebaseDatabase.getInstance().getReference().child("prediccion-hoy");
 
         eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                lblCielo.setText(dataSnapshot.child("cielo").getValue().toString());
-                lblTemperatura.setText(dataSnapshot.child("temperatura").getValue().toString());
-                lblHumedad.setText(dataSnapshot.child("humedad").getValue().toString());
+                Prediccion pred = dataSnapshot.getValue(Prediccion.class);
+                lblCielo.setText(pred.getCielo());
+                lblTemperatura.setText(pred.getTemperatura() + "ºC");
+                lblHumedad.setText(pred.getHumedad() + "%");
             }
 
             @Override
